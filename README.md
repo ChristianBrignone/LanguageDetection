@@ -14,11 +14,15 @@ The project is divided into three main components:
 To use the API, you can either run it using Docker or directly using Python.
 
 ### Running with Docker
-- You can download the Docker image from [Docker Hub]() or alternatively build the Docker image yourself with the following lines: 
+You can download the Docker image from [Docker Hub](https://hub.docker.com/repository/docker/christianbrignone/language-detection/general) or alternatively build the Docker image yourself
+- Download the Docker image
+  - Download the Docker image: `docker pull christianbrignone/language-detection:latest` 
+  - Run the Docker container: `docker run -p 5000:5000 christianbrignone/language-detection`
+- Build the Docker Image
   - Clone this repository: `git clone https://github.com/ChristianBrignone/LanguageDetection.git`
   - Navigate to the root directory of the project: `cd LanguageDetection`
   - Build the Docker image: `docker build -t language-detection . `
-- Run the Docker container: `docker run -p 5000:5000 language-detection`
+  - Run the Docker container: `docker run -p 5000:5000 language-detection`
 
 ### Running with Python
 - Clone this repository: `git clone https://github.com/ChristianBrignone/LanguageDetection.git`
