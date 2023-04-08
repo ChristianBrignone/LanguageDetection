@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Language Detector</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Language Detector</h1>
+        <form>
+            <input type="text" name="text" id="text-input" placeholder="Enter text to detect">
+            <button type="submit" id="submit-button">Predict</button>
+        </form>
+        <div id="prediction"></div>
+        <script>
+            const form = document.querySelector('form');
+            const textInput = document.getElementById('text-input');
+            const submitButton = document.getElementById('submit-button');
+            const predictionDiv = document.getElementById('prediction');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: textInput.value }),
+                });
+
+                const data = await response.json();
+                if (data.prediction == 1)
+                    string_prediction = 'Italian Language'
+                else
+                    string_prediction = 'Non-Italian Language'
+                predictionDiv.textContent = string_prediction + '  -  (' + data.prediction + ')'
+            });
+        </script>
+    </div>
+</body>
+
+</html>
