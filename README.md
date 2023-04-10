@@ -86,9 +86,9 @@ To have a clearer picture of the motivations and implementational choices, pleas
 
 ## Improvements
 
-Possible improvements of this work, in the case in which we would have more resources at our disposal (dataset size, time, computational power ect.), can be various. First of all, in presence of a large dataset, possibly containing more languages, and considering the possibility of having access to the necessary computing power, the choice of the model would be different, for example we may employ the pretrained XLM-RoBERTa architecture and apply a fine-tuning on our data.
+Possible improvements of this work, in the case in which we would have more resources at our disposal (dataset size, time, computational power etc.), can be various. First of all, in presence of a large dataset, possibly containing more languages, and considering the possibility of having access to the necessary computing power, the choice of the model would be different, for example, we may employ the pretrained XLM-RoBERTa architecture and apply a fine-tuning on our data. This would certainly improve the accuracy of the predictions.
 
-Another aspect that can be expanded, is the implementation of the REST API. In fact, to mantain the application as simple as possible to meet the requirement (inference call which should return 1 for Italian and 0 for a Non-Italian sentence), many aspects have been simplified, like the possibility to detect multiple senteces simultaneously, an authentication mechanisms and a better managment of the stats codes.
+Another aspect that can be expanded, is the implementation of the REST API. In fact, to maintain the application as simple as possible to meet the requirement (inference call which should return 1 for Italian and 0 for a Non-Italian sentence), many aspects have been simplified, like the possibility to detect multiple sentences simultaneously, an authentication mechanism and better management of the status codes.
 
 # Exercise 2 - Machine Translation
 
