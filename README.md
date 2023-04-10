@@ -2,7 +2,7 @@
 
 This project provides a REST API to detect if the language of a given sentence is in Italian or not. The application is based on a classifier trained on a dataset of text samples from 17 different languages, which can be found on [Kaggle](https://www.kaggle.com/datasets/basilb2s/language-detection).
 
-The project is divided into three main components:
+The project is composed of three main components:
 
 - **Language_detection.ipynb**: A Jupyter notebook, available also on [Google Colab](https://colab.research.google.com/drive/1cdAb12xi1M4Ly-Dzpo3f3c-7BpCsFgdc?usp=sharing), used to analyze the Kaggle dataset, preprocess the text data, and perform a grid search to choose the optimal vectorizer and classifier. The fitted model is then saved as a pickle file (language_detection_model.pkl) which can be found in the *model* folder.
 
@@ -69,6 +69,8 @@ The API documentation can be found [here](http://localhost:5000/docs).
 
 In addition, for those who prefer a graphical interface, we have also provided a simple [user interface](http://localhost:5000) to facilitate the use of the API. 
 By using the graphical interface we also avoid the problems related with the special characters, therefore you can simply write a sentence in the form and predict its class by using the *Predict* button.
+
+<img src="https://github.com/ChristianBrignone/LanguageDetection/blob/main/static/ui.jpg" width="300" height="250">
 
 ## Model
 
